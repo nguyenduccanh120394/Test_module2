@@ -24,12 +24,11 @@ public class FileManagement {
             }
         }
     }
-    public List<DanhBa>readFile(String path){
-        List<DanhBa>list=new ArrayList<>();
+    public List<DanhBa>readFile(String path,List<DanhBa>list){
         FileReader fileReader;
         BufferedReader br = null ;
         try {
-            fileReader = new FileReader(path);
+            fileReader = new FileReader("data.csv");
             br = new BufferedReader(fileReader);
             String line = br.readLine();
             while ((line=br.readLine())!=null){

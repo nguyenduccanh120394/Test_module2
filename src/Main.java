@@ -10,14 +10,6 @@ public class Main {
         FileManagement fileManagement = new FileManagement();
         QuanLyDanhBa ql = new QuanLyDanhBa();
         Validate validate = new Validate();
-        DanhBa danhBa = new DanhBa("0366265953","Family","Canh","Male","Ha Noi","12/3/1994","duccanh@gmail.com");
-        DanhBa danhBa2 = new DanhBa("0366265999","Family","Canh2","Male","Ha Noi","12/3/1994","duccanh@gmail.com");
-        DanhBa danhBa3 = new DanhBa("0126265999","Family","Canh2","Male","Ha Noi","12/3/1994","duccanh@gmail.com");
-        DanhBa danhBa4 = new DanhBa("0378265999","Family","Canh2","Male","Ha Noi","12/3/1994","duccanh@gmail.com");
-        DanhBa danhBa5 = new DanhBa("0399265999","Family","Canh2","Male","Ha Noi","12/3/1994","duccanh@gmail.com");
-        DanhBa danhBa6 = new DanhBa("03556265999","Family","Canh2","Male","Ha Noi","12/3/1994","duccanh@gmail.com");
-        ql.add(danhBa);
-        ql.add(danhBa2);
         while (true){
             menu();
             int choice = -1;
@@ -152,7 +144,7 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Read");
-                    fileManagement.readFile("data.csv");
+                    fileManagement.readFile("data.csv",ql.getList());
                     break;
             }
         }
